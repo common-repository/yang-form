@@ -1,0 +1,50 @@
+/**
+ * Yang-Form 表单插件前端样式
+ * @author	yangjunwei.com
+ * @date	2012.07.02
+ */
+
+.yang_form { width:650px; margin:0px 11px; font-family:"微软雅黑", "宋体" ; font-size:12px; padding-left:20px; line-height:22px; }	
+
+.fl { float:left; }
+
+/* 表单名称及说明 */
+.yang_form .form_info { margin-bottom:10px; color:#01479d; font-size:12px; }
+	.yang_form .form_info h2 { padding-bottom:8px; border-bottom:1px solid #ddd; color:#01479d; font-size:20px; height:25px; }
+	.yang_form .form_info p { margin-top:8px; font-size:12px; }
+
+/* 表单项名称 */
+	.yang_form .field { clear: left; float: left; margin: 5px auto 10px; padding: 0 10px 2px; width: 650px; }
+
+/* 表单项名称 */
+	.yang_form .field label { width: 90px; height: 30px; line-height: 30px; padding-right: 10px; color: #333333; float: left; font-size: 14px; text-align: right; }
+
+/* 表单项是否必填 */
+	.yang_form .field .f60 { width: 20px; height: 30px; line-height: 30px; padding-right: 10px; color:#FF6600; float: left; font-size: 14px; text-align: right; }
+
+/* 表单项 */
+	.yang_form .t_input, .yang_form select { font-size: 14px; padding: 3px 4px; width:300px !important; height:25px; line-height:25px; font-size:14px; padding:0px 4px; }
+
+	/* 上传 */
+	.yang_form .input_file { width:200px; margin-left:-200px; filter:alpha(opacity=0); opacity:0; height:25px; line-height:25px; background:#dddddd; }
+	/* 文本框 */
+	.yang_form textarea { width:300px; height:100px; overflow:auto; line-height:20px; padding:5px; }
+		.yang_form textarea.gray { color:#999; }
+	/* 排序 */
+	.yang_form .sort{overflow:hidden; padding:0px; margin:0px; }
+		.yang_form .sort span{float:left; white-space:nowrap; margin-right:5px; margin-bottom:5px; padding:1px 3px; background:#fff; color:#777; border:1px solid #FF9900; cursor:pointer; }
+		.yang_form .sort em{font-style:normal; color:#FF9900}
+		.yang_form .no_sort{overflow:hidden; padding:0px; margin:0px; }
+			.yang_form .no_sort span{float:left; white-space:nowrap; margin-right:5px; margin-bottom:5px; padding:1px 3px; background:#fff; border:1px solid #333; color:#333; cursor:pointer; }
+			.yang_form .no_sort em{font-style:normal; color:#777; }
+
+/* 表单填写提示 */
+	.yang_form .hint { clear: left; float: left; color:#989898; text-align:left; font-size:12px; }
+
+/* 错误提示 */
+	.yang_form .tips { color:#ff0000; text-align:left; font-size:12px; }	
+
+/* 提交表单 错误提示 */
+	.yangform_sub { clear:left; margin:20px 0px 20px 80px; padding:10px 10px; }
+	.yang_form .submit { padding:0 10px; height:25px; line-height:25px; border:none; background:#E21D6C; color:#FFF; letter-spacing:2px; cursor:pointer; border-radius: 11px 11px 11px 11px; }
+	.yang_form .tips_sub { padding:5px; color:#CC0033; font-size:12px; }

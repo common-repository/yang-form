@@ -1,0 +1,69 @@
+
+
+
+
+-- 数据库增加三张表
+
+ 
+
+--
+-- 表的结构 `jxqy_yang_form`
+--
+
+CREATE TABLE `jxqy_yang_form` (
+	`form_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+	`form_title` char(60) NOT NULL COMMENT '表单标题',
+	`form_start_time` date NOT NULL COMMENT '有效时间',
+	`form_end_time` date NOT NULL COMMENT '有效时间',
+	`form_nums` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '提交表单数量',
+	`form_add_time` datetime NOT NULL COMMENT '添加时间',
+	`form_intro` text NOT NULL COMMENT '表单介绍',
+	`form_info_show` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '表单信息是否显示',
+	`status` tinyint(1) unsigned NOT NULL DEFAULT '1',
+	PRIMARY KEY (`form_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `jxqy_yang_form_items`
+--
+
+CREATE TABLE `jxqy_yang_form_items` (
+	`item_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT '项目id',
+	`form_id` mediumint(8) unsigned NOT NULL COMMENT '表单id',
+	`item_title` char(255) NOT NULL COMMENT '项目标题',
+	`item_type` char(10) NOT NULL COMMENT '项目类型',
+	`item_rule` char(255) NOT NULL COMMENT '项目规则',
+	`item_ext` char(255) NOT NULL,
+	`item_size` smallint(4) unsigned NOT NULL,
+	`item_list` text NOT NULL COMMENT '项目选项',
+	`item_must` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '必选',
+	`item_hidden` mediumint(8) unsigned NOT NULL DEFAULT '0',
+	`item_sort` smallint(4) unsigned NOT NULL DEFAULT '0' COMMENT '项目顺序',
+	`item_add_time` datetime NOT NULL,
+	`status` tinyint(3) unsigned NOT NULL DEFAULT '1',
+	PRIMARY KEY (`item_id`),
+	KEY `item_sort` (`item_sort`),
+	KEY `form_id` (`form_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `jxqy_yang_form_data`
+--
+
+CREATE TABLE `jxqy_yang_form_data` (
+	`data_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+	`form_id` mediumint(8) unsigned NOT NULL,
+	`data_info` text NOT NULL,
+	`addtime` datetime NOT NULL,
+	`addip` char(15) NOT NULL,
+	PRIMARY KEY (`data_id`),
+	KEY `form_id` (`form_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+
+
+
